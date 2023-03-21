@@ -5,21 +5,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
   </head>
   <body>
+    {% include 'nav.html' %}
     <div class="container">
-    <h1 class="text-center mt-3 mb-3">Hello jobs!</h1>
     <img src="./static/mainimg.avif" class="img-fluid" style="width: 100%; height:360px; object-fit:cover;" alt="main">
     <h2 class="text-center mt-3 mb-3">About</h2>
-    <p class="lead">
+      <div class="row">
+    <p class="lead col-md-7">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales neque sodales ut etiam. Nulla at volutpat diam ut venenatis. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Aliquam ultrices sagittis orci a. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Ornare massa eget egestas purus viverra accumsan. Placerat vestibulum lectus mauris ultrices eros. Convallis convallis tellus id interdum velit laoreet id donec. Amet consectetur adipiscing elit duis tristique sollicitudin. Amet aliquam id diam maecenas. Dignissim cras tincidunt 
     </p>
+      <div class="d-none d-md-block col-5 pt-4">
+        <img src="./static/people.avif">
+      </div>
+      </div>
 <h2 class="text-center mt-3 mb-3">Open positions</h2>
     {% for job in jobs %}
       {% include 'jobitem.html' %}
     {% endfor %}
-  <div class="text-center p-4">
-  <button class="btn btn-primary btn-sm">contact us</button>
-    <p>copyrights 2023</p>
-  </div>
+  {% include 'footer.html'%}
   </div>
   </body>
 </html>
